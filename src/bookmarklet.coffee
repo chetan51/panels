@@ -57,25 +57,16 @@ else
 	hn_frame = hn_comments.find("#hn-frame")
 	
 	$.getJSON "http://api.ihackernews.com/getid?format=jsonp&callback=?&url=" + encodeURI(window.location), (data) ->
+		
 		hn_comments.appendTo("body")
 		hn_comments.slideDown "fast"
+		
 		if (data.length)
 			hn_frame.attr "src", "http://news.ycombinator.com/item?id=" + data[0]
-			hn_frame.bind "load", ->
-				hn_status.fadeOut "fast"
-				hn_frame.fadeIn "fast"
-				hn_comments.animate {height: "400px"}, "fast"
 		else
-			hn_submit_link_html = """
-				<a href="#" id="hn-submit-link">Submit a new post.</a>
-			"""
-			hn_submit_link = $(hn_submit_link_html)
-			hn_status.html """
-				No post found. 
-			"""
-			hn_status.append hn_submit_link
-			hn_submit_link.click ->
-				hn_frame.attr "src", "http://news.ycombinator.com/submitlink?u=" + encodeURIComponent(document.location) + "&t=" + encodeURIComponent(document.title)
-				hn_status.fadeOut "fast"
-				hn_frame.fadeIn "fast"
-				hn_comments.animate {height: "400px"}, "fast"
+			hn_frame.attr "src", "http://news.ycombinator.com/submitlink?u=" + encodeURIComponent(document.location) + "&t=" + encodeURIComponent(document.title)
+		
+		hn_frame.bind "load", ->
+			hn_status.fadeOut "fast"
+			hn_frame.fadeIn "fast"
+			hn_comments.animate {height: "400px"}
