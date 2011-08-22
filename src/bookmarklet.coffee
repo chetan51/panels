@@ -55,6 +55,7 @@ hn_comments_html = """
 	<div id="hn-comments">
 		<div id="hn-close">
 			<a href="#" id="hn-close-button">&times;</a>
+		</div>
 		<div id="hn-status">
 			Loading...
 		</div>
