@@ -1,16 +1,27 @@
 <html>
 	<head>
-		<title>Hacker Panel</title>
+		<title>Hacker Panel: A Hacker News Bookmarklet</title>
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="container">
+			<div id="description">
+				Pull up the Hacker News discussion for any page, or start one if it doesn't exist.
+			</div>
 			<div class="directions">
 				Drag this button to your bookmarks bar
 			</div>
 			<div id="bookmarklet-container">
-				<a id="bookmarklet" href="javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a.createElement(&quot;script&quot;);c.type=&quot;text/javascript&quot;;c.src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/&quot;+g+&quot;/jquery.min.js&quot;;c.onload=c.onreadystatechange=function(){if(!b&&(!(d=this.readyState)||d==&quot;loaded&quot;||d==&quot;complete&quot;)){h((f=e.jQuery).noConflict(1),b=1);f(c).remove()}};a.documentElement.childNodes[0].appendChild(c)}})(window,document,&quot;1.6.1&quot;,function($,L){ {{code}} });">Hacker Panel</a>
+				<div>
+					<img src="right-arrow.png" />
+				</div>
+				<div>
+					<a id="bookmarklet" href="javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a.createElement(&quot;script&quot;);c.type=&quot;text/javascript&quot;;c.src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/&quot;+g+&quot;/jquery.min.js&quot;;c.onload=c.onreadystatechange=function(){if(!b&&(!(d=this.readyState)||d==&quot;loaded&quot;||d==&quot;complete&quot;)){h((f=e.jQuery).noConflict(1),b=1);f(c).remove()}};a.documentElement.childNodes[0].appendChild(c)}})(window,document,&quot;1.6.1&quot;,function($,L){ {{code}} });">Hacker Panel</a>
+				</div>
+				<div>
+					<img src="left-arrow.png" />
+				</div>
 			</div>
 			<div class="directions">
 				Or just click to try it on this page!

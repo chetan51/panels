@@ -10,6 +10,18 @@ body {
 	text-align: center;
 }
 
+#description {
+	font-family: Verdana;
+	font-size: 14px;
+	color: #333;
+}
+
+#bookmarklet-container div {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px;
+}
+
 #bookmarklet {
 	background: #F60;
 	border: 1px solid #000;
