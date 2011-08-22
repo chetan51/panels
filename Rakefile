@@ -9,9 +9,15 @@ end
 task :compile_index => "lib" do
   bookmarklet = File.open("lib/bookmarklet.js", "rb")
   bookmarklet_contents = bookmarklet.read
-  bookmarklet_contents = JSMin.minify(bookmarklet_contents)
-  bookmarklet_contents = CGI.escapeHTML(bookmarklet_contents)
   
+  # Minify bookmarklet javascript
+  bookmarklet_contents = JSMin.minify(bookmarklet_contents)
+  
+  # Escape HTML in bookmarklet
+  bookmarklet_contents = CGI.escapeHTML(bookmarklet_contents)
+  bookmarklet_contents.gsub!('%', '%25')
+  
+  # Insert bookmarklet into index page
   File.open("lib/index.html",'w+') do |index|
     index_contents = File.read("src/index.html")
     index_contents['{{code}}'] = bookmarklet_contents

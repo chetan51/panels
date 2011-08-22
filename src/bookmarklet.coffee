@@ -6,7 +6,7 @@ style = """
 			bottom: 0;
 			z-index: 999999;
 			
-			width: 100%25;
+			width: 100%;
 			height: 40px;
 
 			border: 0;
@@ -42,8 +42,8 @@ style = """
 		
 		#hn-frame {
 			display: none;
-			width: 100%25;
-			height: 100%25;
+			width: 100%;
+			height: 100%;
 			border: 0;
 		}
 	</style>
