@@ -87,7 +87,7 @@ else
 		hn_frame.bind "load", ->
 			hn_status.fadeOut "fast"
 			hn_frame.fadeIn "fast"
-			hn_comments.animate {height: "400px"}
+			hn_comments.animate {height: "60%"}
 
 hn_close_button = hn_comments.find("#hn-close-button")
 hn_close_button.click ->
