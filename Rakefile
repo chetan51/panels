@@ -1,4 +1,5 @@
 require 'cgi'
+require 'jsmin'
 directory "lib"
 
 task :compile_bookmarklet => "lib" do
@@ -8,6 +9,7 @@ end
 task :compile_index => "lib" do
   bookmarklet = File.open("lib/bookmarklet.js", "rb")
   bookmarklet_contents = bookmarklet.read
+  bookmarklet_contents = JSMin.minify(bookmarklet_contents)
   bookmarklet_contents = CGI.escapeHTML(bookmarklet_contents)
   
   File.open("lib/index.html",'w+') do |index|
