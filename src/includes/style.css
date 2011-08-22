@@ -20,6 +20,14 @@ body {
 	font-weight: bold;
 }
 
+#bookmarklet:hover {
+	background: #E50;
+}
+
+#bookmarklet:active {
+	background: #D40;
+}
+
 .directions {
 	margin: 24px;
 	font-family: 'The Girl Next Door', cursive;
