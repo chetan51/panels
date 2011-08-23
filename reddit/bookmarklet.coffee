@@ -22,6 +22,8 @@ style = """
 			position: absolute;
 			top: 10px;
 			right: 10px;
+			padding: 3px;
+			background: #fff;
 			color: #999;
 			cursor: auto;
 			display: block;
