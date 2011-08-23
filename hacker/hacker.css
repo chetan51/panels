@@ -1,0 +1,11 @@
+#bookmarklet {
+	background: #F60;
+}
+
+#bookmarklet:hover {
+	background: #E50;
+}
+
+#bookmarklet:active {
+	background: #D40;
+}

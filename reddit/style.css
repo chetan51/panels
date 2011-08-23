@@ -1,0 +1,55 @@
+body {
+	background: url('subtle_freckles.png');
+	margin: 0;
+}
+
+#container {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#description {
+	font-family: Verdana;
+	font-size: 24px;
+	color: #555;
+	margin-top: 24px;
+}
+
+#bookmarklet-container div {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px;
+}
+
+#bookmarklet {
+	border: 1px solid #000;
+	padding: 10px;
+	font-family: Verdana;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.directions {
+	margin: 24px;
+	font-family: 'The Girl Next Door', cursive;
+	font-size: 30px;
+	color: #555;
+}
+
+#directions-top {
+	margin-bottom: 0;
+}
+
+#directions-bottom {
+	margin-top: 5px;
+}
+
+#footer {
+	font-family: "Gentium Basic", Gentium, Palatino, Georgia, serif;
+	font-size: 16px;
+	font-style: italic;
+	color: #555;
+}
