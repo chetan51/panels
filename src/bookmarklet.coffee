@@ -74,11 +74,10 @@ else
 	hn_status = hn_comments.find("#hn-status")
 	hn_frame = hn_comments.find("#hn-frame")
 	
+	hn_comments.appendTo("body")
+	hn_comments.slideDown "fast"
+		
 	$.getJSON "http://api.ihackernews.com/getid?format=jsonp&callback=?&url=" + encodeURI(window.location), (data) ->
-		
-		hn_comments.appendTo("body")
-		hn_comments.slideDown "fast"
-		
 		if (data.length)
 			hn_frame.attr "src", "http://news.ycombinator.com/item?id=" + data[0]
 		else
