@@ -51,6 +51,10 @@ style = """
 	</style>
 """
 
+head = $("head")
+if not head.length
+	# Create head <-- this is necessary for images
+	$("html").append $("<head></head>")
 $("head").append style
 
 panel_html = """
