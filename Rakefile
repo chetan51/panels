@@ -52,6 +52,9 @@ task :compile_bookmarklets do
       final_bookmarklet_contents = shared_bookmarklet_contents
       final_bookmarklet_contents['{{code}}'] = bookmarklet_contents
       
+	# Replace variables
+      final_bookmarklet_contents.gsub!("\{\{panel_id\}\}", panel[:id])
+      
       bookmarklet.puts final_bookmarklet_contents
     end
   end
