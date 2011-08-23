@@ -1,6 +1,6 @@
 style = """
 	<style type="text/css">
-		#panel-comments {
+		#reddit-panel {
 			display: none;
 			position: fixed;
 			bottom: 0;
@@ -18,7 +18,7 @@ style = """
 			box-shadow: rgba(0, 0, 0, 0.2) 0 -5px 6p;
 		}
 		
-		#panel-close-button {
+		#reddit-panel .close-button {
 			position: absolute;
 			top: 10px;
 			right: 10px;
@@ -33,14 +33,14 @@ style = """
 			text-decoration: none;
 		}
 		
-		#panel-status {
+		#reddit-panel .status {
 			text-align: center;
 			padding-top: 10px;
 			font-family: Verdana;
 			font-size: 12px;
 		}
 		
-		#panel-frame {
+		#reddit-panel .frame {
 			display: none;
 			width: 100%;
 			height: 100%;
@@ -51,31 +51,31 @@ style = """
 
 $("head").append style
 
-panel_comments_html = """
-	<div id="panel-comments">
-		<div id="panel-close">
-			<a href="#" id="panel-close-button">&times;</a>
+panel_html = """
+	<div id="reddit-panel" class="panel">
+		<div class="close">
+			<a href="#" class="close-button">&times;</a>
 		</div>
-		<div id="panel-status">
+		<div class="status">
 			Loading...
 		</div>
-		<iframe id="panel-frame" />
+		<iframe class="frame" />
 	</div>
 """
 
-panel_comments = $("#panel-comments")
-if panel_comments.length
-	if panel_comments.is(":visible")
-		panel_comments.slideUp "fast"
+panel = $("#reddit-panel")
+if panel.length
+	if panel.is(":visible")
+		panel.slideUp "fast"
 	else
-		panel_comments.slideDown "fast"
+		panel.slideDown "fast"
 else
-	panel_comments = $(panel_comments_html)
-	panel_status = panel_comments.find("#panel-status")
-	panel_frame = panel_comments.find("#panel-frame")
+	panel = $(panel_html)
+	panel_status = panel.find(".status")
+	panel_frame = panel.find(".frame")
 	
-	panel_comments.appendTo("body")
-	panel_comments.slideDown "fast"
+	panel.appendTo("body")
+	panel.slideDown "fast"
 	
 # The tag below will be replaced by the specialized code for each panel.
 	# Put specialized code here. Do not change the indent level of the code below.
@@ -89,8 +89,8 @@ else
 	panel_frame.bind "load", ->
 		panel_status.fadeOut "fast"
 		panel_frame.fadeIn "fast"
-		panel_comments.animate {height: "60%"}
+		panel.animate {height: "60%"}
 
-panel_close_button = panel_comments.find("#panel-close-button")
+panel_close_button = panel.find(".button")
 panel_close_button.click ->
-	panel_comments.slideUp "fast"
+	panel.slideUp "fast"
