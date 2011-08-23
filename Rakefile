@@ -91,6 +91,10 @@ task :compile_indexes do
       bookmarklet_contents = File.read("lib/" + panel[:id] + "/bookmarklet.js")
       index_contents['{{bookmarklet}}'] = bookmarklet_contents
       
+      # Insert HTML
+      other_panels_contents = File.read("src/" + panel[:id] + "/_other_panels.html")
+      index_contents['{{other_panels}}'] = other_panels_contents
+      
       index.puts index_contents
     end
   end

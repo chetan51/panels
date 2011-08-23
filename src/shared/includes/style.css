@@ -47,6 +47,13 @@ body {
 	margin-top: 5px;
 }
 
+#other-panels {
+	font-family: Verdana;
+	font-size: 18px;
+	color: #555;
+	margin-bottom: 14px;
+}
+
 #footer {
 	font-family: "Gentium Basic", Gentium, Palatino, Georgia, serif;
 	font-size: 16px;
