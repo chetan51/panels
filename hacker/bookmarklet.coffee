@@ -22,7 +22,7 @@ style = """
 			position: absolute;
 			top: 10px;
 			right: 10px;
-			padding: 3px;
+			padding: 5px;
 			background: #fff;
 			color: #999;
 			cursor: auto;
@@ -92,6 +92,6 @@ else
 		panel_frame.fadeIn "fast"
 		panel.animate {height: "60%"}
 
-panel_close_button = panel.find(".button")
+panel_close_button = panel.find(".close-button")
 panel_close_button.click ->
 	panel.slideUp "fast"
