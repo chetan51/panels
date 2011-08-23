@@ -14,6 +14,7 @@ body {
 	font-family: Verdana;
 	font-size: 24px;
 	color: #555;
+	margin-top: 24px;
 }
 
 #bookmarklet-container div {
@@ -45,6 +46,14 @@ body {
 	font-family: 'The Girl Next Door', cursive;
 	font-size: 30px;
 	color: #555;
+}
+
+#directions-top {
+	margin-bottom: 0;
+}
+
+#directions-bottom {
+	margin-top: 5px;
 }
 
 #footer {
